@@ -1,0 +1,17 @@
+<svg [attr.width]="ChartRadius * 2"
+     [attr.height]="ChartRadius * 2">
+  <circle [attr.cx]="ChartRadius"
+          [attr.cy]="ChartRadius"
+          [attr.r]="ChartRadius"
+          [attr.fill]="'gray'">
+  </circle>
+  <path *ngFor="let data of ChartData; let i = index"
+        [attr.d]="ChartParts[i]"
+        [attr.fill]="data.Color">
+  </path>
+  <circle [attr.cx]="ChartRadius"
+          [attr.cy]="ChartRadius"
+          [attr.r]="ChartRadius - 8"
+          [attr.fill]="'white'">
+  </circle>
+</svg>
